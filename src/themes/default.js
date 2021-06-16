@@ -118,25 +118,27 @@ const defaultTheme = {
     },
     MuiTableRow: {
       root: {
-        height: 56,
+        height: 56
+        ,fontFamily:'IRANSans !important'
       },
     },
     MuiTableCell: {
       root: {
         borderBottom: "1px solid rgba(224, 224, 224, .5)",
-        paddingLeft: 20
+        paddingLeft: 20,
+        FontFamily:'IRANSans'
       },
 
       head: {
         fontSize: "0.95rem",
         textAlign: 'right',
-        // fontFamily: 'IRANSans !important'
+        fontFamily: 'IRANSans !important'
       },
       body: {
         fontSize: "0.95rem",
         direction: 'rtl',
         textAlign: 'right',
-        // fontFamily: 'IRANSans !important'
+        fontFamily: 'IRANSans !important'
       },
       sizeSmall: {
         size: "small"
@@ -179,7 +181,7 @@ const defaultTheme = {
     },
 
     MuiButton: {
-      root: { marginLeft: '30px' }
+      root: { marginLeft: '30px' ,fontFamily:'IRANSans !important'}
 
     },
     MuiInput: {

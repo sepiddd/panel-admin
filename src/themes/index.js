@@ -4,7 +4,9 @@ import { createMuiTheme } from "@material-ui/core";
 
 const overrides = {
   typography: {
-    fontFamily: 'IRANSans',
+    body:{ 
+       fontFamily: 'IRANSans !important',
+},
     h1: {
       fontSize: "3rem",
     },
@@ -27,8 +29,7 @@ const overrides = {
 };
 
 const themes = {
-  default: createMuiTheme({ ...defaultTheme, ...overrides }),
-  direction: 'rtl',
+  default: createMuiTheme({ ...defaultTheme, ...overrides })
 };
 
 
