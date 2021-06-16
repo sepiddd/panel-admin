@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles(theme => ({
   container: {
+    
     height: "100vh",
     width: "100vw",
     display: "flex",
@@ -59,7 +60,7 @@ export default makeStyles(theme => ({
   greeting: {
     fontWeight: 500,
     textAlign: "center",
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(4)
   },
   subGreeting: {
     fontWeight: 500,
@@ -72,6 +73,7 @@ export default makeStyles(theme => ({
     backgroundColor: "white",
     width: "100%",
     textTransform: "none",
+    marginLeft:0
   },
   googleButtonCreating: {
     marginTop: 0,
@@ -86,6 +88,7 @@ export default makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+   
   },
   createAccountButton: {
     height: 46,

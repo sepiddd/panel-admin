@@ -12,8 +12,9 @@ import { UserProvider } from "./context/UserContext";
 ReactDOM.render(
   <LayoutProvider>
     <UserProvider>
-      <ThemeProvider theme={Themes.default}>
+      <ThemeProvider theme={Themes.default} >
         <CssBaseline />
+
         <App />
       </ThemeProvider>
     </UserProvider>

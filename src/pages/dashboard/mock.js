@@ -27,7 +27,7 @@ const mock = {
   ],
   bigStat: [
     {
-      product: "Light Blue",
+      product: " آبی روشن",
       total: {
         monthly: 4232,
         weekly: 1465,
@@ -47,7 +47,7 @@ const mock = {
       }
     },
     {
-      product: "Sing App",
+      product: "علامت",
       total: {
         monthly: 754,
         weekly: 180,

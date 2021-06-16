@@ -9,15 +9,24 @@ import Error from "../pages/error";
 import Login from "../pages/login";
 
 // context
+// import AddUser from "../pages/userslist/AddUser";
+// import UserDetails from "../pages/userslist/UserDetails";
+// import UserList from "../pages/userslist/UserList";
 import { useUserState } from "../context/UserContext";
-
+// import { UsersContextProvider } from "../context";
+// import UserEdit from "../pages/userslist/UserEdit";
 export default function App() {
+  // const users = [{ id: 1, name: "John" }, { id: 2, name: "Joanna" }];
+
+
+
   // global
   var { isAuthenticated } = useUserState();
 
   return (
     <HashRouter>
       <Switch>
+       
         <Route exact path="/" render={() => <Redirect to="/app/dashboard" />} />
         <Route
           exact

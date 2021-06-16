@@ -32,6 +32,7 @@ export default makeStyles(theme => ({
     flexGrow: 1,
   },
   search: {
+
     position: "relative",
     borderRadius: 25,
     paddingLeft: theme.spacing(2.5),
@@ -69,6 +70,8 @@ export default makeStyles(theme => ({
   inputRoot: {
     color: "inherit",
     width: "100%",
+    direction: 'ltr'
+
   },
   inputInput: {
     height: 36,
@@ -110,6 +113,7 @@ export default makeStyles(theme => ({
   headerIcon: {
     fontSize: 28,
     color: "rgba(255, 255, 255, 0.35)",
+
   },
   headerIconCollapse: {
     color: "white",
@@ -126,7 +130,7 @@ export default makeStyles(theme => ({
     color: theme.palette.text.hint,
   },
   profileMenuIcon: {
-    marginRight: theme.spacing(2),
+    marginLeft: theme.spacing(2),
     color: theme.palette.text.hint,
     '&:hover': {
       color: theme.palette.primary.main,
@@ -164,7 +168,7 @@ export default makeStyles(theme => ({
     textTransform: "none",
   },
   sendButtonIcon: {
-    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
   },
   purchaseBtn: {
     [theme.breakpoints.down('sm')]: {

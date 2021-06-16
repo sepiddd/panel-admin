@@ -7,7 +7,6 @@ import {
   Menu,
   MenuItem,
   Fab,
-  Link
 } from "@material-ui/core";
 import {
   Menu as MenuIcon,
@@ -24,7 +23,7 @@ import classNames from "classnames";
 import useStyles from "./styles";
 
 // components
-import { Badge, Typography, Button } from "../Wrappers";
+import { Badge, Typography } from "../Wrappers";
 import Notification from "../Notification/Notification";
 import UserAvatar from "../UserAvatar/UserAvatar";
 
@@ -40,52 +39,52 @@ const messages = [
   {
     id: 0,
     variant: "warning",
-    name: "Jane Hew",
-    message: "Hey! How is it going?",
+    name: "مطهره مولوی زاده",
+    message: "سلام ...من چطور وارد بشم؟",
     time: "9:32",
   },
   {
     id: 1,
     variant: "success",
-    name: "Lloyd Brown",
-    message: "Check out my new Dashboard",
+    name: "زیبا بروفه",
+    message: "نامه های جدید رو چک کن!",
     time: "9:18",
   },
   {
     id: 2,
     variant: "primary",
-    name: "Mark Winstein",
-    message: "I want rearrange the appointment",
+    name: " کیان ابولفضلی",
+    message: "من میخوام داشبورد رو مشاهده کنم.",
     time: "9:15",
   },
   {
     id: 3,
     variant: "secondary",
-    name: "Liana Dutti",
-    message: "Good news from sale department",
+    name: "ژیان خوشحال",
+    message: "خبرهای جدید مسدود شده!",
     time: "9:09",
   },
 ];
 
 const notifications = [
-  { id: 0, color: "warning", message: "Check out this awesome ticket" },
+  { id: 0, color: "warning", message: "این بلیط عالی را ببینید" },
   {
     id: 1,
     color: "success",
     type: "info",
-    message: "What is the best way to get ...",
+    message: "بهترین راه چیست ...",
   },
   {
     id: 2,
     color: "secondary",
     type: "notification",
-    message: "This is just a simple notification",
+    message: "این پیام فقط یک پیام ساده هست",
   },
   {
     id: 3,
     color: "primary",
     type: "e-commerce",
-    message: "12 new orders has arrived today",
+    message: "12 خرید جدید",
   },
 ];
 
@@ -137,10 +136,10 @@ export default function Header(props) {
           )}
         </IconButton>
         <Typography variant="h6" weight="medium" className={classes.logotype}>
-          React Material Admin
+          تالار مبادلات رمز ارز
         </Typography>
         <div className={classes.grow} />
-        <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} className={classes.purchaseBtn}>Unlock full version</Button>
+        {/* <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} className={classes.purchaseBtn}>Unlock full version</Button> */}
         <div
           className={classNames(classes.search, {
             [classes.searchFocused]: isSearchOpen,
@@ -155,7 +154,7 @@ export default function Header(props) {
             <SearchIcon classes={{ root: classes.headerIcon }} />
           </div>
           <InputBase
-            placeholder="Search…"
+            placeholder="جستجو"
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput,
@@ -166,7 +165,7 @@ export default function Header(props) {
           color="inherit"
           aria-haspopup="true"
           aria-controls="mail-menu"
-          onClick={e => {
+          onClick={(e) => {
             setNotificationsMenu(e.currentTarget);
             setIsNotificationsUnread(false);
           }}
@@ -183,7 +182,7 @@ export default function Header(props) {
           color="inherit"
           aria-haspopup="true"
           aria-controls="mail-menu"
-          onClick={e => {
+          onClick={(e) => {
             setMailMenu(e.currentTarget);
             setIsMailsUnread(false);
           }}
@@ -201,7 +200,7 @@ export default function Header(props) {
           color="inherit"
           className={classes.headerMenuButton}
           aria-controls="profile-menu"
-          onClick={e => setProfileMenu(e.currentTarget)}
+          onClick={(e) => setProfileMenu(e.currentTarget)}
         >
           <AccountIcon classes={{ root: classes.headerIcon }} />
         </IconButton>
@@ -217,17 +216,17 @@ export default function Header(props) {
         >
           <div className={classes.profileMenuUser}>
             <Typography variant="h4" weight="medium">
-              New Messages
+              پیام های جدید
             </Typography>
             <Typography
               className={classes.profileMenuLink}
               component="a"
               color="secondary"
             >
-              {messages.length} New Messages
+              {messages.length} پیام های جدید
             </Typography>
           </div>
-          {messages.map(message => (
+          {messages.map((message) => (
             <MenuItem key={message.id} className={classes.messageNotification}>
               <div className={classes.messageNotificationSide}>
                 <UserAvatar color={message.variant} name={message.name} />
@@ -256,7 +255,7 @@ export default function Header(props) {
             aria-label="Add"
             className={classes.sendMessageButton}
           >
-            Send New Message
+            ارسال پیام های جدید
             <SendIcon className={classes.sendButtonIcon} />
           </Fab>
         </Menu>
@@ -268,7 +267,7 @@ export default function Header(props) {
           className={classes.headerMenu}
           disableAutoFocusItem
         >
-          {notifications.map(notification => (
+          {notifications.map((notification) => (
             <MenuItem
               key={notification.id}
               onClick={() => setNotificationsMenu(null)}
@@ -289,15 +288,15 @@ export default function Header(props) {
         >
           <div className={classes.profileMenuUser}>
             <Typography variant="h4" weight="medium">
-              John Smith
+              هدا کاخکی
             </Typography>
             <Typography
               className={classes.profileMenuLink}
               component="a"
               color="primary"
-              href="https://flatlogic.com"
+              href="/"
             >
-              Flalogic.com
+              تالار ارز رمز دیجیتال
             </Typography>
           </div>
           <MenuItem
@@ -306,7 +305,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Profile
+            <AccountIcon className={classes.profileMenuIcon} /> پروفایل
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -314,7 +313,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Tasks
+            <AccountIcon className={classes.profileMenuIcon} /> وظایف
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -322,7 +321,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Messages
+            <AccountIcon className={classes.profileMenuIcon} /> پیام ها
           </MenuItem>
           <div className={classes.profileMenuUser}>
             <Typography
@@ -330,7 +329,7 @@ export default function Header(props) {
               color="primary"
               onClick={() => signOut(userDispatch, props.history)}
             >
-              Sign Out
+              خروج
             </Typography>
           </div>
         </Menu>

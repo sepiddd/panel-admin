@@ -10,6 +10,8 @@ const lightenRate = 7.5;
 const darkenRate = 15;
 
 const defaultTheme = {
+
+  direction: 'rtl',
   palette: {
     primary: {
       main: primary,
@@ -85,7 +87,7 @@ const defaultTheme = {
       paper: {
         boxShadow:
           "0px 3px 11px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
-      },
+      }
     },
     MuiSelect: {
       icon: {
@@ -99,6 +101,8 @@ const defaultTheme = {
           "&:focus": {
             backgroundColor: "#F3F5FF",
           },
+
+
         },
       },
       button: {
@@ -120,20 +124,78 @@ const defaultTheme = {
     MuiTableCell: {
       root: {
         borderBottom: "1px solid rgba(224, 224, 224, .5)",
-        paddingLeft: 24
+        paddingLeft: 20
       },
+
       head: {
         fontSize: "0.95rem",
+        textAlign: 'right',
+        // fontFamily: 'IRANSans !important'
       },
       body: {
         fontSize: "0.95rem",
+        direction: 'rtl',
+        textAlign: 'right',
+        // fontFamily: 'IRANSans !important'
       },
+      sizeSmall: {
+        size: "small"
+      },
+      paddingNone: {
+        paddingNone: 'none'
+      }
     },
     PrivateSwitchBase: {
       root: {
         marginLeft: 10
       }
     }
+    ,
+    MuiTypography: {
+      root: {
+        fontFamily: 'IRANSans !important',
+        paddingRight: '12px',
+        paddingLeft: '12px',
+        direction: 'rtl'
+      }
+    },
+    MuiListItemText: {
+      root: {
+        textAlign: 'right'
+      }
+    },
+    MuiList: {
+      root: {
+        direction: 'rtl',
+        textAlign: 'right',
+        paddingLeft: '0'
+
+      }
+    },
+    MUIDataTable: {
+      responsiveBase: {
+        position: 'unset !important'
+      }
+    },
+
+    MuiButton: {
+      root: { marginLeft: '30px' }
+
+    },
+    MuiInput: {
+      input: {
+        "&::placeholder": {
+          textAlign: 'right'
+        }
+      }
+    },
+    MuiTablePagination: {
+      actions: {
+        marginRight: '20px',
+        direction: 'rtl'
+      }
+    },
+
   },
 };
 
